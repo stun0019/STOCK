@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>台股股票期貨偵測系統</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#0d1117;
+    color:white;
+    margin:20px;
+}
+
+h1{
+    text-align:center;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+th{
+    background:#161b22;
+    padding:12px;
+}
+
+td{
+    padding:10px;
+    text-align:center;
+    border-bottom:1px solid #30363d;
+}
+
+.long{
+    color:#00ff88;
+    font-weight:bold;
+}
+
+.short{
+    color:#ff5555;
+    font-weight:bold;
+}
+
+.score-high{
+    color:#00ff88;
+}
+
+.score-mid{
+    color:#ffcc00;
+}
+
+.score-low{
+    color:#ff5555;
+}
+
+.card{
+    background:#161b22;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>📈 台股 / 股票期貨偵測系統</h1>
+
+<div class="card">
+    <h3>系統條件</h3>
+    <ul>
+        <li>1H EMA20 > EMA60 = 多頭</li>
+        <li>1H EMA20 < EMA60 = 空頭</li>
+        <li>5M 回踩 EMA20 進場</li>
+        <li>固定 RR = 1:3</li>
+    </ul>
+</div>
+
+<table>
+<thead>
+<tr>
+<th>標的</th>
+<th>方向</th>
+<th>進場價</th>
+<th>停損價</th>
+<th>目標價</th>
+<th>RR</th>
+<th>強度分數</th>
+</tr>
+</thead>
+
+<tbody id="signalTable"></tbody>
+</table>
+
+<script>
+
+const signals = [
+{
+    symbol:"2330 台積電",
+    direction:"做多",
+    entry:1050,
+    stop:1038,
+    target:1086,
+    rr:"1:3",
+    score:88
+},
+{
+    symbol:"2454 聯發科",
+    direction:"做多",
+    entry:1290,
+    stop:1270,
+    target:1350,
+    rr:"1:3",
+    score:82
+},
+{
+    symbol:"2317 鴻海",
+    direction:"做空",
+    entry:168,
+    stop:171,
+    target:159,
+    rr:"1:3",
+    score:71
+}
+];
+
+const table = document.getElementById("signalTable");
+
+signals.forEach(stock => {
+
+let scoreClass = "score-low";
+
+if(stock.score >= 80){
+    scoreClass = "score-high";
+}
+else if(stock.score >= 60){
+    scoreClass = "score-mid";
+}
+
+table.innerHTML += `
+<tr>
+<td>${stock.symbol}</td>
+<td class="${stock.direction === '做多' ? 'long':'short'}">
+${stock.direction}
+</td>
+<td>${stock.entry}</td>
+<td>${stock.stop}</td>
+<td>${stock.target}</td>
+<td>${stock.rr}</td>
+<td class="${scoreClass}">
+${stock.score}
+</td>
+</tr>
+`;
+
+});
+
+</script>
+
+</body>
+</html>
