@@ -1,0 +1,139 @@
+
+[
+  {
+    "name": "Arsenal",
+    "sport": "football",
+    "elo_seed": 1665,
+    "attack": 1.72,
+    "defense": 1.17,
+    "home_advantage": 65
+  },
+  {
+    "name": "Chelsea",
+    "sport": "football",
+    "elo_seed": 1580,
+    "attack": 1.48,
+    "defense": 1.03,
+    "home_advantage": 62
+  },
+  {
+    "name": "Liverpool",
+    "sport": "football",
+    "elo_seed": 1690,
+    "attack": 1.86,
+    "defense": 1.12,
+    "home_advantage": 68
+  },
+  {
+    "name": "Manchester City",
+    "sport": "football",
+    "elo_seed": 1725,
+    "attack": 1.94,
+    "defense": 1.21,
+    "home_advantage": 67
+  },
+  {
+    "name": "Real Madrid",
+    "sport": "football",
+    "elo_seed": 1735,
+    "attack": 1.9,
+    "defense": 1.18,
+    "home_advantage": 66
+  },
+  {
+    "name": "Barcelona",
+    "sport": "football",
+    "elo_seed": 1685,
+    "attack": 1.82,
+    "defense": 1.08,
+    "home_advantage": 65
+  },
+  {
+    "name": "Bayern Munich",
+    "sport": "football",
+    "elo_seed": 1710,
+    "attack": 1.96,
+    "defense": 1.1,
+    "home_advantage": 64
+  },
+  {
+    "name": "Borussia Dortmund",
+    "sport": "football",
+    "elo_seed": 1605,
+    "attack": 1.62,
+    "defense": 1.0,
+    "home_advantage": 63
+  },
+  {
+    "name": "Boston Celtics",
+    "sport": "basketball",
+    "elo_seed": 1715,
+    "offense": 121.4,
+    "defense": 110.6,
+    "pace": 98.7,
+    "home_advantage": 55
+  },
+  {
+    "name": "Denver Nuggets",
+    "sport": "basketball",
+    "elo_seed": 1680,
+    "offense": 118.6,
+    "defense": 113.1,
+    "pace": 97.5,
+    "home_advantage": 54
+  },
+  {
+    "name": "Golden State Warriors",
+    "sport": "basketball",
+    "elo_seed": 1585,
+    "offense": 116.7,
+    "defense": 115.2,
+    "pace": 100.6,
+    "home_advantage": 53
+  },
+  {
+    "name": "Los Angeles Lakers",
+    "sport": "basketball",
+    "elo_seed": 1575,
+    "offense": 115.9,
+    "defense": 115.8,
+    "pace": 101.2,
+    "home_advantage": 54
+  },
+  {
+    "name": "Dallas Mavericks",
+    "sport": "basketball",
+    "elo_seed": 1635,
+    "offense": 118.2,
+    "defense": 114.8,
+    "pace": 99.1,
+    "home_advantage": 53
+  },
+  {
+    "name": "Miami Heat",
+    "sport": "basketball",
+    "elo_seed": 1565,
+    "offense": 113.8,
+    "defense": 112.9,
+    "pace": 96.8,
+    "home_advantage": 52
+  },
+  {
+    "name": "Milwaukee Bucks",
+    "sport": "basketball",
+    "elo_seed": 1620,
+    "offense": 117.9,
+    "defense": 116.0,
+    "pace": 100.3,
+    "home_advantage": 54
+  },
+  {
+    "name": "Phoenix Suns",
+    "sport": "basketball",
+    "elo_seed": 1595,
+    "offense": 116.9,
+    "defense": 114.1,
+    "pace": 98.9,
+    "home_advantage": 53
+  }
+]

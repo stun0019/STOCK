@@ -1,0 +1,169 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #101214;
+    color: #f2f4f8;
+    margin: 0;
+    padding: 24px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.panel {
+    background: #1a1f24;
+    border: 1px solid #303841;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 16px;
+}
+
+h2,
+h3,
+h4,
+h5,
+p {
+    margin-top: 0;
+}
+
+.controls {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(140px, 1fr));
+    gap: 12px;
+    margin: 16px 0;
+}
+
+label {
+    color: #aab6c2;
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    gap: 6px;
+}
+
+input,
+select {
+    background: #0f1419;
+    border: 1px solid #3b4652;
+    border-radius: 6px;
+    color: #f2f4f8;
+    min-height: 42px;
+    padding: 10px 12px;
+}
+
+button {
+    background: #1f8f5f;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+    min-height: 44px;
+    padding: 12px 16px;
+}
+
+button:disabled {
+    cursor: progress;
+    opacity: 0.65;
+}
+
+.result-header {
+    align-items: flex-start;
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+}
+
+.recommendation {
+    border: 1px solid currentColor;
+    border-radius: 8px;
+    font-weight: 800;
+    min-width: 100px;
+    padding: 10px 12px;
+    text-align: center;
+}
+
+.metrics {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(130px, 1fr));
+    gap: 12px;
+    margin: 16px 0 22px;
+}
+
+.metrics div,
+.trace-item {
+    background: #11171d;
+    border: 1px solid #303841;
+    border-radius: 8px;
+    padding: 14px;
+}
+
+.metrics span {
+    color: #aab6c2;
+    display: block;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.metrics strong {
+    font-size: 22px;
+}
+
+.trace-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    gap: 12px;
+}
+
+.trace-item h5 {
+    color: #dce5ed;
+    margin-bottom: 8px;
+}
+
+pre {
+    color: #c9d4df;
+    font-family: Consolas, Monaco, monospace;
+    font-size: 12px;
+    line-height: 1.45;
+    margin: 0;
+    overflow-x: auto;
+    white-space: pre-wrap;
+}
+
+.good {
+    color: #3ddc84;
+}
+
+.bad {
+    color: #ff6b6b;
+}
+
+.warn {
+    color: #ffd166;
+}
+
+.muted {
+    color: #aab6c2;
+}
+
+@media (max-width: 760px) {
+    body {
+        padding: 14px;
+    }
+
+    .controls,
+    .metrics,
+    .trace-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .result-header {
+        flex-direction: column;
+    }
+}

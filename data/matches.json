@@ -1,0 +1,31 @@
+
+[
+  {
+    "sport": "football",
+    "home_team": "Arsenal",
+    "away_team": "Liverpool",
+    "market": "home_win",
+    "odds": 2.2
+  },
+  {
+    "sport": "football",
+    "home_team": "Real Madrid",
+    "away_team": "Manchester City",
+    "market": "home_win",
+    "odds": 2.05
+  },
+  {
+    "sport": "basketball",
+    "home_team": "Boston Celtics",
+    "away_team": "Denver Nuggets",
+    "market": "home_win",
+    "odds": 1.82
+  },
+  {
+    "sport": "basketball",
+    "home_team": "Dallas Mavericks",
+    "away_team": "Phoenix Suns",
+    "market": "home_win",
+    "odds": 1.95
+  }
+]
